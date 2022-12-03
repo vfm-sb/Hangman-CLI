@@ -4,7 +4,7 @@ __author__ = "VFM | SB"
 __email__ = "vfm_sb@proton.me"
 __copyright__ = "Copyleft 2022"
 __license__ = "MIT"
-__version__ = "0.2.4"
+__version__ = "0.2.5"
 __maintainer__ = "VFM | SB"
 __status__ = "Development"
 
@@ -12,16 +12,9 @@ import os # Built-in Modules
 
 from helpers import read_file # Local Modules
 from helpers import random_word
+from helpers import repr_word
 from art import LOGO, STAGES
 
-
-# Functions
-def repr_word(secret_word: list) -> None:
-    word = [char for char in secret_word]
-    word_length = len(word)
-    edge = f'+{"-" * (word_length * 2 + 1)}+'
-    middle = f'| {" ".join(word)} |'
-    print(edge + "\n" + middle + "\n" + edge)
 
 # Main Function
 def main():

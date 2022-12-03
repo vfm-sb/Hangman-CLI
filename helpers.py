@@ -23,6 +23,12 @@ def random_word(words: list) -> str:
     """
     return choice(words)
 
+def repr_word(secret_word: list) -> None:
+    word = [char for char in secret_word]
+    word_length = len(word)
+    edge = f'+{"-" * (word_length * 2 + 1)}+'
+    middle = f'| {" ".join(word)} |'
+    print(edge + "\n" + middle + "\n" + edge)
 
 # Function Testing
 if __name__ == "__main__":
