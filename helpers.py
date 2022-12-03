@@ -6,6 +6,10 @@ from random import choice # Built-in Modules
 
 # Helper Functions
 def read_file(filename: str) -> list:
+    """
+    Reads a Given Text File (individual words separated by newlines)\n
+    and Returns a List of Words
+    """
     words = []
     with open(filename, "r", encoding="utf-8") as file:
         for line in file:
@@ -13,16 +17,20 @@ def read_file(filename: str) -> list:
     return words
 
 def random_word(words: list) -> str:
+    """
+    Chooses a Word from a List of Words\n
+    and Returns Chosen Word (str)
+    """
     return choice(words)
-
 
 
 # Function Testing
 if __name__ == "__main__":
+    pass
     # testing read_file() function:
-    words_list = read_file("words.txt")
+    # words_list = read_file("words.txt")
     # print(words_list)
     # testing random_word() function:
-    for _ in range(5):
-        word = random_word(words_list)
-        print(word)
+    # for _ in range(5):
+    #     word = random_word(words_list)
+    #     print(word)
